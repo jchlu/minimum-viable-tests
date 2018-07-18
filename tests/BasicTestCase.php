@@ -2,7 +2,7 @@
 
 namespace MinimumViableTests\Tests;
 
-use \PHPUnit\Framework\TestCase;
+use PHPUnit\Framework\TestCase;
 
 class BasicTestCase extends TestCase
 {
