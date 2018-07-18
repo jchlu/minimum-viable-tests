@@ -13,8 +13,16 @@ class FizzBuzzTest extends TestCase
      *
      * @return void
      */
-    public function testHandlesNonIntegersCorrectly()
+    public function testHandlesNonIntegerExceptionCorrectlyInAnnotation()
     {
+        $fizzBuzz = new FizzBuzz();
+        $collection = ['A', 1, 'B', 'C', 1.234];
+        $fizzBuzz->process($collection);
+    }
+
+    public function testHandlesNonIntegerExceptionCorrectlyInCode()
+    {
+        $this->expectException('Exception', 'Did not receive a collection of integers');
         $fizzBuzz = new FizzBuzz();
         $collection = ['A', 1, 'B', 'C', 1.234];
         $fizzBuzz->process($collection);
